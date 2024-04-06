@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Backend for dnd character sheet data",
   "main": "app.ts",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon app.ts",
-    "start": "node app.ts"
+    "dev": "tsx watch app.ts",
+    "start": "tsx app.ts"
   },
   "author": "Josh Barwick",
   "license": "ISC",
@@ -15,7 +16,7 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongodb": "6.2",
-    "ts-node": "^10.9.1"
+    "tsx": "^4.7.2"
   },
   "devDependencies": {
     "@types/node": "^20.8.10",

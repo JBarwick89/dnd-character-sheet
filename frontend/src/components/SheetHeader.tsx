@@ -24,7 +24,7 @@ export default function SheetHeader({onEnterKey}: SheetHeaderProps) {
           color: 'red',
         });
       }
-      
+
       if (!character.name) {
         notifications.show({
           title: 'Error',

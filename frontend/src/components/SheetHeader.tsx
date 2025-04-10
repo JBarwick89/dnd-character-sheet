@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../hooks';
 import { setCharacterProperty } from '../features/character-slice';
 import { Character } from '../types';
 
-type SheetHeaderProps = {
+interface SheetHeaderProps {
   onEnterKey: Function,
 }
 

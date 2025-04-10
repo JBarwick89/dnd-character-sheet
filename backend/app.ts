@@ -1,7 +1,9 @@
-import express, { Request, Response } from "express";
+import express, { Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { MongoClient } from "mongodb";
+
+import { CharacterRequest } from "./types";
 
 const app = express();
 const port = "8000";
@@ -33,13 +35,6 @@ app.get("/characters", async (req: Request, res: Response) => {
     res.send({ error: error.message });
   }
 });
-
-interface CharacterRequest extends Request {
-  body: {
-    name: string;
-    playerName: string;
-  };
-}
 
 app.post("/character", async (req: CharacterRequest, res: Response) => {
   try {

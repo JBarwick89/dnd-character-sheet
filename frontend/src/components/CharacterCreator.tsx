@@ -17,7 +17,11 @@ export default function CharacterCreator() {
   const [showAlert, setShowAlert] = useState(false);
   const dispatch = useAppDispatch();
 
-  const saveCharacter = async () => {
+  const saveCharacter = async (
+    e:
+      | React.KeyboardEvent<HTMLInputElement>
+      | React.MouseEvent<HTMLButtonElement>
+  ) => {
     if (character.name && character.playerName) {
       setLoading(true);
 
@@ -40,7 +44,21 @@ export default function CharacterCreator() {
           console.log(error);
         });
     } else {
-      setShowAlert(true);
+      if (!character.playerName) {
+        notifications.show({
+          title: "Error",
+          message: "Player name is required",
+          color: "red",
+        });
+      }
+
+      if (!character.name) {
+        notifications.show({
+          title: "Error",
+          message: "Character name is required",
+          color: "red",
+        });
+      }
     }
   };
 

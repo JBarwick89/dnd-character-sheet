@@ -1,6 +1,5 @@
 import "./SheetHeader.css";
 import { Group, TextInput } from "@mantine/core";
-import { notifications } from "@mantine/notifications";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import { setCharacterProperty } from "../features/character-slice";
 import { Character } from "../types";

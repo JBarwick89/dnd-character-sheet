@@ -13,7 +13,7 @@ export default function SheetHeader({ onEnterKey }: SheetHeaderProps) {
   const character: Character = useAppSelector((state) => state.character);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") onEnterKey(e);
+    if (e.key === "Enter") onEnterKey();
   };
 
   return (

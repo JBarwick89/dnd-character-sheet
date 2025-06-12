@@ -17,11 +17,7 @@ export default function CharacterCreator() {
   const [showAlert, setShowAlert] = useState(false);
   const dispatch = useAppDispatch();
 
-  const saveCharacter = async (
-    e:
-      | React.KeyboardEvent<HTMLInputElement>
-      | React.MouseEvent<HTMLButtonElement>
-  ) => {
+  const saveCharacter = async () => {
     if (character.name && character.playerName) {
       setLoading(true);
 
